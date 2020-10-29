@@ -164,6 +164,17 @@ The value in milliseconds for the period of time to pass before invoking fallbac
 **Messaging**: Yes<br>
 **Chat**: No
 
+#### maxConsumerMessageDelay
+The maximum time delay in minutes for the consumer's message to be delivered to the agent. If the message is received by the agent after this time period, the bot cannot process the message.
+
+For example, assume the consumer sends a message at 1:00 p.m., and the agent receives it at 1:20 p.m. The delay is 20 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot can process the message.
+
+Conversely, assume the consumer sends a message at 1:00 p.m., and the agent receives it at 2:00 p.m. The delay is 60 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot cannot process the message.
+
+**Default value**: 30<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
 #### maxEscalationRetries
 When the agent escalation fails, we send an \_agent\_escalation\_failed\_ message. However, this can end in infinitely loop if the escalation keeps failing. This will set the max number of failure messages sent.
 
