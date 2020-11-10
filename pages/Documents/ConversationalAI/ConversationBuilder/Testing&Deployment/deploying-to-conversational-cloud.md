@@ -165,11 +165,11 @@ The value in milliseconds for the period of time to pass before invoking fallbac
 **Chat**: No
 
 #### maxConsumerMessageDelay
-The maximum time delay in minutes for the consumer's message to be delivered to the agent. If the message is received by the agent after this time period, the bot cannot process the message.
+The maximum time delay in minutes between the bot agent's receipt of the last consumer message and its receipt of the next consumer message. If the next message is received after this time has elapsed, the bot ignores the message and does not respond.
 
-For example, assume the consumer sends a message at 1:00 p.m., and the agent receives it at 1:20 p.m. The delay is 20 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot can process the message.
+For example, assume the bot agent receives a message from the consumer at 1:00 p.m., and it then receives the consumer's next message at 1:20 p.m. The delay between consumer messages is 20 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot will respond to the message received at 1:20 p.m.
 
-Conversely, assume the consumer sends a message at 1:00 p.m., and the agent receives it at 2:00 p.m. The delay is 60 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot cannot process the message.
+Conversely, assume the bot agent receives a message from the consumer at 1:00 p.m., and it then receives the consumer's next message at 2:00 p.m. The delay between consumer messages is 60 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot will not respond to the message received at 2:00 p.m.
 
 **Default value**: 30<br>
 **Messaging**: Yes<br>
