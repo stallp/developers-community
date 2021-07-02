@@ -33,10 +33,23 @@ plugins:
 
 
 algolia:
-  application_id: "EICOREWTRW"
+  application_id: "1AUKOQ7JDV"
   index_name: "devMain"
   #also index the following html elements
-  nodes_to_index: 'code,p,blockquote,li,div.paragraph'
+  nodes_to_index: 'p,blockquote,li.span,a,tr.td'
+  files_to_exclude:
+    - pages/Solutions/*
+    - pages/Solutions/*/*
+    - pages/Solutions/*/*/*
+    - pages/hidden/*
+    - pages/hidden/*/*
+    - pages/documents/hidden/*/*
+    - pages/documents/Solutions/*/*
+    - pages/*
+    - pages/*/*
+    - pages/*/*/*
+    - pages/*/*/*/*
+
 
 # #values for the Algolia plugin
 
