@@ -28,7 +28,17 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key.
 
-	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
+	* **For a machine-to-machine authorizion using OAuth 1.0 App Keys OAuth 2.0 Client Credentials flow**
+		* **OAuth 1.0 App Keys** — [follow the instructions](create-oauth-1-0-api-keys.html), to create and use an App key.
+
+		{: .attn-note}
+	For the Users API, select the Data category and check Conversation History / Messaging Interactions
+
+		* **OAuth 2.0 Client Credentials flow** — [follow the instructions](oauth-2-0-client-credentials.html), to register an OAuth 2.0 application and generate a JWT access token **(Using version 2 of the Authorization API)**.
+
+		{: .attn-note}
+	When registering an OAuth 2.0 application for using the Engagement History API, use the “data.services.enghist” scope.
+
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
